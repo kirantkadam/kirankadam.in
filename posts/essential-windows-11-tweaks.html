@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script>
+    (function () {
+      const stored = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.setAttribute("data-theme", stored || (prefersDark ? "dark" : "light"));
+    })();
+  </script>
+
+  <title>Essential Windows 11 Tweaks for Power Users | Kiran Kadam</title>
+  <meta name="description" content="Reclaim privacy, boost performance, and customize Windows 11 with these practical tweaks every IT admin and power user should know.">
+  <meta name="author" content="Kiran Kadam">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kirankadam.in/posts/essential-windows-11-tweaks.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Kiran Kadam">
+  <meta property="og:title" content="Essential Windows 11 Tweaks for Power Users">
+  <meta property="og:description" content="Reclaim privacy, boost performance, and customize Windows 11 with these practical tweaks.">
+  <meta property="og:url" content="https://kirankadam.in/posts/essential-windows-11-tweaks.html">
+  <meta property="og:image" content="https://kirankadam.in/images/og-home.svg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Essential Windows 11 Tweaks for Power Users">
+  <meta name="twitter:description" content="Reclaim privacy, boost performance, and customize Windows 11 with these practical tweaks.">
+  <meta name="twitter:image" content="https://kirankadam.in/images/og-home.svg">
+
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main-content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li aria-current="page">Essential Windows 11 Tweaks</li>
+        </ol>
+      </div>
+    </nav>
+
+    <article class="article-content" data-reading-time>
+      <header class="article-hero">
+        <span class="article-tag">Windows</span>
+        <h1 id="article-title">Essential Windows 11 Tweaks for Power Users</h1>
+        <p class="hero-subtitle" style="font-size:1.1rem; margin-bottom:1rem;">Reclaim privacy, boost performance, and customize the taskbar with these practical Windows 11 settings every IT admin should know.</p>
+        <div class="article-meta" style="justify-content:flex-start; gap:1rem;">
+          <span>Jul 14, 2026</span>
+          <span class="reading-time">5 min read</span>
+          <span>By Kiran Kadam</span>
+        </div>
+      </header>
+
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='1200' height='630' fill='%23dbeafe'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='%231d4ed8'%3EWindows 11 Power User Guide%3C/text%3E%3C/svg%3E" alt="Windows 11 power user guide featured image" width="1200" height="630" loading="eager">
+
+      <nav class="toc" aria-labelledby="toc-title">
+        <h2 id="toc-title">Table of Contents</h2>
+        <ul>
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#startup">1. Speed Up Boot Time</a></li>
+          <li><a href="#privacy">2. Privacy & Telemetry</a></li>
+          <li><a href="#taskbar">3. Taskbar & Start Menu</a></li>
+          <li><a href="#storage">4. Storage Sense</a></li>
+          <li><a href="#power">5. Power Plan for Performance</a></li>
+          <li><a href="#godmode">6. Enable God Mode</a></li>
+          <li><a href="#snap">7. Snap Layouts & Virtual Desktops</a></li>
+          <li><a href="#terminal">8. Set Windows Terminal as Default</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+      </nav>
+
+      <section id="intro">
+        <h2>Introduction</h2>
+        <p>Windows 11 looks great out of the box, but it also comes with a lot of default settings that are not ideal for power users, IT admins, or anyone who values performance and privacy. This guide walks you through the most useful tweaks you can apply safely — no third-party tools required.</p>
+        <p>These tweaks are tested on Windows 11 Pro and Home editions. If you manage multiple machines, you can also apply many of these through Group Policy or Intune.</p>
+      </section>
+
+      <section id="startup">
+        <h2>1. Speed Up Boot Time by Managing Startup Apps</h2>
+        <p>Many applications add themselves to startup, slowing down boot time and consuming memory. Windows 11 makes it easy to review and disable them.</p>
+        <h3>Steps</h3>
+        <ol>
+          <li>Press <kbd>Ctrl + Shift + Esc</kbd> to open Task Manager.</li>
+          <li>Click the <strong>Startup apps</strong> tab.</li>
+          <li>Review the list. Right-click unnecessary apps and select <strong>Disable</strong>.</li>
+          <li>Pay attention to the <strong>Startup impact</strong> column — focus on high-impact apps first.</li>
+        </ol>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='500'%3E%3Crect width='900' height='500' fill='%23f1f5f9'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='28' fill='%23334155'%3ETask Manager - Startup Apps Tab%3C/text%3E%3C/svg%3E" alt="Task Manager startup apps tab screenshot placeholder" width="900" height="500" loading="lazy">
+      </section>
+
+      <section id="privacy">
+        <h2>2. Privacy & Telemetry</h2>
+        <p>Windows 11 collects diagnostic data, shows suggested content, and sends tips. You can turn most of this off without breaking updates.</p>
+        <h3>Settings to Change</h3>
+        <ol>
+          <li>Open <strong>Settings → Privacy & security → Diagnostics & feedback</strong>.</li>
+          <li>Set <strong>Diagnostic data</strong> to <strong>Required diagnostic data</strong> (not Optional).</li>
+          <li>Turn off <strong>Improve inking and typing</strong> and <strong>Tailored experiences</strong>.</li>
+          <li>Go to <strong>General</strong> under Privacy and turn off all toggles for ads and suggestions.</li>
+        </ol>
+        <p>For managed devices, you can also disable telemetry via Group Policy or registry. For a single machine, the Settings app is enough.</p>
+      </section>
+
+      <section id="taskbar">
+        <h2>3. Taskbar & Start Menu</h2>
+        <p>The default centered taskbar and widgets can be customized to match your workflow.</p>
+        <h3>Useful Changes</h3>
+        <ul>
+          <li><strong>Move taskbar icons to the left:</strong> Settings → Personalization → Taskbar → Taskbar behaviors → Taskbar alignment → Left.</li>
+          <li><strong>Remove widgets:</strong> Turn off Widgets in Taskbar settings.</li>
+          <li><strong>Disable taskbar chat:</strong> Turn off Chat in Taskbar settings.</li>
+          <li><strong>Remove recommended section:</strong> Settings → Personalization → Start → turn off "Show recommendations".</li>
+        </ul>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='500'%3E%3Crect width='900' height='500' fill='%23f1f5f9'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='28' fill='%23334155'%3EWindows 11 Taskbar Settings%3C/text%3E%3C/svg%3E" alt="Windows 11 taskbar settings placeholder" width="900" height="500" loading="lazy">
+      </section>
+
+      <section id="storage">
+        <h2>4. Storage Sense</h2>
+        <p>Storage Sense automatically cleans up temporary files and Recycle Bin items. It is one of the easiest ways to keep disk space healthy.</p>
+        <h3>Steps</h3>
+        <ol>
+          <li>Go to <strong>Settings → System → Storage</strong>.</li>
+          <li>Turn on <strong>Storage Sense</strong>.</li>
+          <li>Click <strong>Storage Sense</strong> to configure how often it runs and what it cleans.</li>
+          <li>Also run <strong>Cleanup recommendations</strong> to remove large unused files.</li>
+        </ol>
+      </section>
+
+      <section id="power">
+        <h2>5. Power Plan for Performance</h2>
+        <p>By default, Windows 11 uses a balanced power plan. On desktops and high-performance laptops, switching to the High performance plan can improve responsiveness.</p>
+        <h3>Command</h3>
+        <p>Open Command Prompt as Administrator and run:</p>
+        <pre><code>powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c</code><button type="button" class="copy-code">Copy</button></pre>
+        <p>To list available power plans, use:</p>
+        <pre><code>powercfg /list</code><button type="button" class="copy-code">Copy</button></pre>
+        <p><strong>Note:</strong> On laptops, this will reduce battery life. Use it only when plugged in, or create a custom balanced plan.</p>
+      </section>
+
+      <section id="godmode">
+        <h2>6. Enable God Mode</h2>
+        <p>God Mode is a special folder that gives you one-click access to hundreds of advanced Windows settings.</p>
+        <h3>Steps</h3>
+        <ol>
+          <li>Right-click on the desktop and choose <strong>New → Folder</strong>.</li>
+          <li>Name the folder exactly as shown below (copy and paste the whole name including the brackets):</li>
+        </ol>
+        <pre><code>GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}</code><button type="button" class="copy-code">Copy</button></pre>
+        <ol start="3">
+          <li>The folder icon will change. Open it to see all advanced settings.</li>
+        </ol>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='500'%3E%3Crect width='900' height='500' fill='%23f1f5f9'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='28' fill='%23334155'%3EWindows 11 God Mode Folder%3C/text%3E%3C/svg%3E" alt="Windows 11 God Mode folder placeholder" width="900" height="500" loading="lazy">
+      </section>
+
+      <section id="snap">
+        <h2>7. Snap Layouts & Virtual Desktops</h2>
+        <p>Windows 11 improves multitasking with snap layouts and virtual desktops. These are especially useful if you work with multiple apps and monitors.</p>
+        <h3>How to Use Snap Layouts</h3>
+        <ul>
+          <li>Hover over the <strong>Maximize button</strong> of any window to see layout options.</li>
+          <li>Choose a layout and select which window fills each zone.</li>
+          <li>Use <kbd>Win + Z</kbd> to trigger snap layouts with the keyboard.</li>
+        </ul>
+        <h3>Virtual Desktops</h3>
+        <ul>
+          <li>Press <kbd>Win + Tab</kbd> to open Task View.</li>
+          <li>Click <strong>New desktop</strong> to create separate workspaces.</li>
+          <li>Use <kbd>Win + Ctrl + Left/Right</kbd> to switch between desktops.</li>
+        </ul>
+      </section>
+
+      <section id="terminal">
+        <h2>8. Set Windows Terminal as Default Terminal</h2>
+        <p>Windows Terminal is a modern, tabbed terminal that supports PowerShell, Command Prompt, and WSL. You should make it the default terminal.</p>
+        <h3>Steps</h3>
+        <ol>
+          <li>Open <strong>Windows Terminal</strong>.</li>
+          <li>Click the dropdown arrow → <strong>Settings</strong>.</li>
+          <li>Under <strong>Default terminal application</strong>, select <strong>Windows Terminal</strong>.</li>
+          <li>Choose your preferred default profile (PowerShell, Command Prompt, etc.).</li>
+        </ol>
+        <pre><code>wt.exe</code><button type="button" class="copy-code">Copy</button></pre>
+        <p>You can now launch Windows Terminal from Run dialog by typing <code>wt</code> and pressing Enter.</p>
+      </section>
+
+      <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>These eight tweaks make Windows 11 faster, cleaner, and more private without installing any extra software. They are also a great starting point if you manage Windows 11 devices in a small business or school environment.</p>
+        <p>If you found this guide helpful, share it with other IT admins and Windows users. For more Windows tips, check the related articles below.</p>
+      </section>
+
+      <div class="share-buttons" aria-label="Share this article">
+        <a href="https://twitter.com/intent/tweet?url=https://kirankadam.in/posts/essential-windows-11-tweaks.html&text=Essential%20Windows%2011%20Tweaks%20for%20Power%20Users" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">Share on Twitter</a>
+        <a href="https://www.linkedin.com/shareArticle?url=https://kirankadam.in/posts/essential-windows-11-tweaks.html&title=Essential%20Windows%2011%20Tweaks%20for%20Power%20Users" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">Share on LinkedIn</a>
+        <a href="https://wa.me/?text=https://kirankadam.in/posts/essential-windows-11-tweaks.html" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">Share on WhatsApp</a>
+        <button type="button" class="btn btn-sm btn-secondary" onclick="navigator.clipboard.writeText(window.location.href)">Copy Link</button>
+      </div>
+
+      <div class="card" style="margin-top: 2.5rem;">
+        <h3 class="card-title">Related Articles</h3>
+        <ul class="footer-links" style="margin-top:0.75rem;">
+          <li><a href="#">AI Tools That Actually Help IT Admins</a></li>
+          <li><a href="#">A Beginner’s Guide to VLANs and Subnetting</a></li>
+          <li><a href="../blog.html">Browse all articles</a></li>
+        </ul>
+      </div>
+    </article>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="../js/script.js" defer></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Essential Windows 11 Tweaks for Power Users",
+      "description": "Reclaim privacy, boost performance, and customize Windows 11 with these practical tweaks every IT admin should know.",
+      "author": {
+        "@id": "https://kirankadam.in/#person"
+      },
+      "publisher": {
+        "@id": "https://kirankadam.in/#person"
+      },
+      "datePublished": "2026-07-14",
+      "dateModified": "2026-07-14",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://kirankadam.in/posts/essential-windows-11-tweaks.html"
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+You are a Senior Full Stack Developer, UI/UX Designer, SEO Expert, and Technical Content Architect.
+
+We are building my personal professional website.
+
+Website Name:
+kirankadam.in
+
+Owner:
+Kiran Kadam
+
+Role:
+IT Administrator | Network Engineer | Cybersecurity Enthusiast | AI Explorer | IoT Developer | Google Workspace Administrator
+
+Purpose:
+This website will become a professional technical knowledge hub where I share tutorials, guides, AI tools, Windows tips, networking, cybersecurity, Android apps, Google Workspace, hardware troubleshooting, ESP32 projects, and technology news.
+
+Target Audience:
+• IT Administrators
+• Students
+• Teachers
+• Network Engineers
+• Small Businesses
+• AI Learners
+• Computer Enthusiasts
+
+================================================
+
+Technology
+
+Use only:
+
+HTML5
+CSS3
+Vanilla JavaScript
+
+Do NOT use:
+
+React
+Angular
+Vue
+Next.js
+Bootstrap
+Tailwind
+
+Everything should be lightweight and fast.
+
+================================================
+
+Coding Rules
+
+Write clean code.
+
+Separate HTML, CSS and JavaScript.
+
+Create reusable components.
+
+Proper comments.
+
+SEO friendly.
+
+Accessibility friendly.
+
+Responsive.
+
+Mobile First.
+
+Fast loading.
+
+Modern UI.
+
+Dark Mode support.
+
+================================================
+
+Folder Structure
+
+Create:
+
+index.html
+
+about.html
+
+blog.html
+
+contact.html
+
+privacy.html
+
+404.html
+
+robots.txt
+
+sitemap.xml
+
+css/
+style.css
+
+js/
+script.js
+
+images/
+
+assets/
+
+posts/
+
+================================================
+
+Homepage Sections
+
+Hero Banner
+
+Professional profile
+
+Call To Action
+
+Latest Articles
+
+Featured Categories
+
+Popular AI Tools
+
+Windows Tips
+
+Networking
+
+Cybersecurity
+
+ESP32 Projects
+
+Google Workspace
+
+Featured Downloads
+
+Newsletter
+
+Testimonials (placeholder)
+
+Footer
+
+================================================
+
+Categories
+
+Windows
+
+Android
+
+Artificial Intelligence
+
+AI Prompt Library
+
+Networking
+
+Cybersecurity
+
+Google Workspace
+
+Microsoft 365
+
+Hardware
+
+ESP32
+
+Arduino
+
+Programming
+
+Web Development
+
+Technology News
+
+Reviews
+
+Downloads
+
+================================================
+
+Navigation
+
+Home
+
+Blog
+
+Categories
+
+AI Tools
+
+Projects
+
+About
+
+Contact
+
+================================================
+
+Homepage Hero
+
+Large professional introduction
+
+Professional image placeholder
+
+Buttons
+
+Read Blog
+
+Explore Tutorials
+
+================================================
+
+Design
+
+Modern
+
+Minimal
+
+Premium
+
+Lots of white space
+
+Rounded cards
+
+Soft shadows
+
+Glassmorphism where appropriate
+
+Beautiful typography
+
+Professional color palette
+
+Smooth animations
+
+No flashy effects
+
+================================================
+
+Features
+
+Dark Mode Toggle
+
+Search Box (frontend placeholder)
+
+Reading Time
+
+Share Buttons
+
+Breadcrumbs
+
+Category Cards
+
+Back to Top Button
+
+Sticky Navigation
+
+Scroll Animation
+
+Code Blocks
+
+Copy Code Button
+
+Table of Contents placeholder
+
+Newsletter form
+
+================================================
+
+SEO
+
+Meta title
+
+Meta description
+
+Canonical URL
+
+Open Graph
+
+Twitter Cards
+
+JSON-LD structured data
+
+Schema.org Person
+
+Schema.org Blog
+
+Schema.org Website
+
+Proper heading hierarchy
+
+================================================
+
+Performance
+
+Lazy loading images
+
+Minified-ready CSS
+
+Optimized JavaScript
+
+Responsive images
+
+Accessibility
+
+================================================
+
+Footer
+
+Social Links
+
+GitHub
+
+LinkedIn
+
+YouTube (placeholder)
+
+Email
+
+Copyright
+
+Quick Links
+
+Privacy Policy
+
+================================================
+
+Create placeholder content for all sections.
+
+Use realistic dummy data.
+
+================================================
+
+Most importantly,
+
+Build this website like a premium technology blog similar to Microsoft Learn, GitHub Docs, or DigitalOcean Tutorials.
+
+The design should look professional and trustworthy instead of like a generic blog.
+
+Generate complete code one page at a time.
+
+Start with index.html.

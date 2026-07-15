@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="100" y="220" font-family="sans-serif" font-size="72" font-weight="800" fill="#ffffff">Kiran Kadam</text>
+  <text x="100" y="310" font-family="sans-serif" font-size="36" fill="#cbd5e1">IT Administrator · Network Engineer · Tech Educator</text>
+  <text x="100" y="400" font-family="sans-serif" font-size="28" fill="#94a3b8">Practical tutorials for Windows, Networking, Cybersecurity, AI &amp; more</text>
+  <circle cx="1050" cy="180" r="80" fill="#2563eb" opacity="0.25"/>
+  <circle cx="1100" cy="450" r="120" fill="#0ea5e9" opacity="0.15"/>
+</svg>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Prevent FOUC for dark mode -->
+  <script>
+    (function () {
+      const stored = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.setAttribute("data-theme", stored || (prefersDark ? "dark" : "light"));
+    })();
+  </script>
+
+  <title>Kiran Kadam | IT Admin, Network Engineer & Tech Educator</title>
+  <meta name="description" content="Practical tutorials and guides for IT administrators, network engineers, cybersecurity learners, and tech enthusiasts by Kiran Kadam.">
+  <meta name="keywords" content="Kiran Kadam, IT Administration, Networking, Cybersecurity, Google Workspace, Windows Tips, ESP32, AI Tools, Tutorials">
+  <meta name="author" content="Kiran Kadam">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kirankadam.in/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kiran Kadam">
+  <meta property="og:title" content="Kiran Kadam | IT Admin, Network Engineer & Tech Educator">
+  <meta property="og:description" content="Practical tutorials and guides for IT administrators, network engineers, cybersecurity learners, and tech enthusiasts.">
+  <meta property="og:url" content="https://kirankadam.in/">
+  <meta property="og:image" content="https://kirankadam.in/images/og-home.svg">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kiran Kadam | IT Admin, Network Engineer & Tech Educator">
+  <meta name="twitter:description" content="Practical tutorials and guides for IT administrators, network engineers, and tech enthusiasts.">
+  <meta name="twitter:image" content="https://kirankadam.in/images/og-home.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="hero-kicker">Welcome to my knowledge hub</span>
+          <h1 id="hero-title" class="hero-title">Hi, I’m <span>Kiran Kadam</span></h1>
+          <p class="hero-subtitle">IT Administrator, Network Engineer, and Cybersecurity Enthusiast sharing practical tutorials, AI tools, Windows tips, ESP32 projects, and Google Workspace guides.</p>
+          <div class="hero-actions">
+            <a href="blog.html" class="btn btn-primary">Read Blog</a>
+            <a href="#categories" class="btn btn-secondary">Explore Tutorials</a>
+          </div>
+          <div class="hero-meta">
+            <div><strong>10+</strong> Years in IT</div>
+            <div><strong>50+</strong> Tutorials</div>
+            <div><strong>100%</strong> Free Guides</div>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="hero-card">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Ccircle cx='100' cy='100' r='100' fill='%23e2e8f0'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='64' fill='%2394a3b8'%3EKK%3C/text%3E%3C/svg%3E" alt="Kiran Kadam profile photo placeholder" class="avatar" width="120" height="120" loading="eager">
+            <h2>Kiran Kadam</h2>
+            <p>Helping IT pros and learners solve real-world tech problems.</p>
+            <div class="hero-search" role="search" aria-label="Search categories">
+              <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="search" id="hero-search" placeholder="Filter categories, e.g., Windows, AI, ESP32…" aria-label="Filter categories">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Articles -->
+    <section class="section" aria-labelledby="latest-articles-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 id="latest-articles-title" class="section-title">Latest Articles</h2>
+          <p class="section-subtitle">Fresh guides and step-by-step tutorials from the lab and the field.</p>
+        </div>
+        <div class="article-grid">
+          <article class="article-card reveal" data-reading-time>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='800' height='450' fill='%23dbeafe'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='28' fill='%231d4ed8'%3EWindows 11%3C/text%3E%3C/svg%3E" alt="Windows 11 guide placeholder" class="article-thumb" width="800" height="450" loading="lazy">
+            <div class="article-body">
+              <span class="article-tag">Windows</span>
+              <h3 class="article-title"><a href="blog.html">Essential Windows 11 Tweaks for Power Users</a></h3>
+              <p class="article-excerpt">Reclaim privacy, boost performance, and customize the taskbar with these practical Windows 11 settings every IT admin should know.</p>
+              <div class="article-meta">
+                <span>Jul 14, 2026</span>
+                <span class="reading-time">5 min read</span>
+              </div>
+            </div>
+          </article>
+          <article class="article-card reveal" data-reading-time>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='800' height='450' fill='%23dcfce7'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='28' fill='%23059669'%3EAI Tools%3C/text%3E%3C/svg%3E" alt="AI tools guide placeholder" class="article-thumb" width="800" height="450" loading="lazy">
+            <div class="article-body">
+              <span class="article-tag">Artificial Intelligence</span>
+              <h3 class="article-title"><a href="blog.html">AI Tools That Actually Help IT Admins</a></h3>
+              <p class="article-excerpt">From log analysis to documentation, discover AI-powered tools that save hours every week without compromising security.</p>
+              <div class="article-meta">
+                <span>Jul 10, 2026</span>
+                <span class="reading-time">7 min read</span>
+              </div>
+            </div>
+          </article>
+          <article class="article-card reveal" data-reading-time>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='800' height='450' fill='%23f3e8ff'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='28' fill='%237c3aed'%3ENetworking%3C/text%3E%3C/svg%3E" alt="Networking guide placeholder" class="article-thumb" width="800" height="450" loading="lazy">
+            <div class="article-body">
+              <span class="article-tag">Networking</span>
+              <h3 class="article-title"><a href="blog.html">A Beginner’s Guide to VLANs and Subnetting</a></h3>
+              <p class="article-excerpt">Break down complex networks into simple, secure segments using VLANs and subnet masks with clear examples.</p>
+              <div class="article-meta">
+                <span>Jul 05, 2026</span>
+                <span class="reading-time">9 min read</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories" class="section" aria-labelledby="categories-title" style="background: var(--surface-elevated);">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 id="categories-title" class="section-title">Featured Categories</h2>
+          <p class="section-subtitle">Browse tutorials organized by the topics that matter most to IT professionals and tech learners.</p>
+        </div>
+        <div class="category-grid">
+          <a href="blog.html" class="category-card reveal" data-search="Windows tips tutorials">
+            <div class="category-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <h3>Windows</h3>
+            <p>Tips, tweaks, and troubleshooting for Windows 10 and 11.</p>
+          </a>
+          <a href="blog.html" class="category-card reveal" data-search="Android apps mobile">
+            <div class="category-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+            <h3>Android</h3>
+            <p>Productivity apps, automation, and Android device management.</p>
+          </a>
+          <a href="blog.html" class="category-card reveal" data-search="Artificial Intelligence AI tools machine learning">
+            <div class="category-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12 2.5 12a10 10 0 0 0 17.5 3"/></svg></div>
+            <h3>Artificial Intelligence</h3>
+            <p>AI prompts, tools, and practical use cases for IT workflows.</p>
+          </a>
+          <a href="blog.html" class="category-card reveal" data-search="AI Prompt Library prompts ChatGPT">
+            <div class="category-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <h3>AI Prompt Library</h3>
+            <p>Ready-to-use prompts for sysadmins, writers, and developers.</p>
+          </a>
+          <a href="blog.html" class="category-card reveal" data-search="Networking CCNA routing switching">
+            <div class="category-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <h3>Networking</h3>
+            <p>CCNA basics, VLANs, routing, switching, and troubleshooting.</p>
+          </a>
+          <a href="blog.html" class="category-card reveal" data-search="Cybersecurity security firewall malware">
+            <div class="category-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>Cybersecurity</h3>
+            <p>Security awareness, hardening guides, and threat prevention.</p>
+          </a>
+          <a href="blog.html" class="category-card reveal" data-search="Google Workspace G Suite admin">
+            <div class="category-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <h3>Google Workspace</h3>
+            <p>Admin console, Gmail, Drive, and Google Cloud Identity tips.</p>
+          </a>
+          <a href="blog.html" class="category-card reveal" data-search="Microsoft 365 Office 365 Intune">
+            <div class="category-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><rect x="7" y="7" width="3" height="3"/><rect x="14" y="7" width="3" height="3"/><rect x="7" y="14" width="3" height="3"/><rect x="14" y="14" width="3" height="3"/></svg></div>
+            <h3>Microsoft 365</h3>
+            <p>Exchange, Teams, Entra ID, and Intune administration.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular AI Tools -->
+    <section id="ai-tools" class="section" aria-labelledby="ai-tools-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 id="ai-tools-title" class="section-title">Popular AI Tools</h2>
+          <p class="section-subtitle">AI assistants and utilities I use regularly for documentation, automation, and security analysis.</p>
+        </div>
+        <div class="tool-grid">
+          <div class="card tool-card reveal">
+            <h3>ChatGPT / Claude</h3>
+            <p class="card-text">Draft runbooks, explain error logs, and generate PowerShell snippets faster than ever.</p>
+            <a href="#" class="btn btn-sm btn-secondary">Learn More</a>
+          </div>
+          <div class="card tool-card reveal">
+            <h3>GitHub Copilot</h3>
+            <p class="card-text">Autocomplete Python, Bash, and infrastructure-as-code while keeping sensitive data private.</p>
+            <a href="#" class="btn btn-sm btn-secondary">Learn More</a>
+          </div>
+          <div class="card tool-card reveal">
+            <h3>Ollama</h3>
+            <p class="card-text">Run open-source LLMs locally on your workstation or homelab server for offline AI tasks.</p>
+            <a href="#" class="btn btn-sm btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Windows Tips -->
+    <section class="section" aria-labelledby="windows-tips-title" style="background: var(--surface-elevated);">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 id="windows-tips-title" class="section-title">Windows Tips</h2>
+          <p class="section-subtitle">Quick fixes and hidden features to make Windows work for you.</p>
+        </div>
+        <div class="tip-grid">
+          <article class="card tip-card reveal">
+            <h3><a href="blog.html">Disable Telemetry & Ads</a></h3>
+            <p class="card-text">Turn off optional diagnostic data, tips, and suggested content to improve privacy and performance.</p>
+          </article>
+          <article class="card tip-card reveal">
+            <h3><a href="blog.html">Windows Terminal Setup</a></h3>
+            <p class="card-text">Customize profiles, fonts, and color schemes for a modern command-line experience.</p>
+          </article>
+          <article class="card tip-card reveal">
+            <h3><a href="blog.html">Power User Shortcuts</a></h3>
+            <p class="card-text">Master keyboard shortcuts that speed up window management and system navigation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Networking -->
+    <section class="section" aria-labelledby="networking-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 id="networking-title" class="section-title">Networking</h2>
+          <p class="section-subtitle">Concepts and commands every network engineer should keep handy.</p>
+        </div>
+        <div class="tip-grid">
+          <article class="card tip-card reveal">
+            <h3><a href="blog.html">Subnetting in 5 Minutes</a></h3>
+            <p class="card-text">A practical shortcut method to calculate subnets, hosts, and broadcast addresses.</p>
+          </article>
+          <article class="card tip-card reveal">
+            <h3><a href="blog.html">Common Cisco CLI Commands</a></h3>
+            <p class="card-text">The most frequently used show and configuration commands for switch and router troubleshooting.</p>
+          </article>
+          <article class="card tip-card reveal">
+            <h3><a href="blog.html">Wireshark Filters for Admins</a></h3>
+            <p class="card-text">Capture filters and display filters that help pinpoint network issues quickly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cybersecurity -->
+    <section class="section" aria-labelledby="cybersecurity-title" style="background: var(--surface-elevated);">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 id="cybersecurity-title" class="section-title">Cybersecurity</h2>
+          <p class="section-subtitle">Stay alert and protect systems with layered security practices.</p>
+        </div>
+        <div class="tip-grid">
+          <article class="card tip-card reveal">
+            <h3><a href="blog.html">Phishing Defense Checklist</a></h3>
+            <p class="card-text">Teach users how to spot suspicious emails and report them safely.</p>
+          </article>
+          <article class="card tip-card reveal">
+            <h3><a href="blog.html">Endpoint Hardening Basics</a></h3>
+            <p class="card-text">Disable unused services, enforce patching, and tighten local security policies.</p>
+          </article>
+          <article class="card tip-card reveal">
+            <h3><a href="blog.html">Password Manager Deployment</a></h3>
+            <p class="card-text">Roll out a password manager organization-wide without creating adoption friction.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESP32 Projects -->
+    <section id="projects" class="section" aria-labelledby="esp32-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 id="esp32-title" class="section-title">ESP32 Projects</h2>
+          <p class="section-subtitle">Hands-on IoT builds with the ESP32, sensors, and microcontrollers.</p>
+        </div>
+        <div class="tool-grid">
+          <article class="card tool-card reveal">
+            <h3><a href="blog.html">ESP32 Wi-Fi Sensor Dashboard</a></h3>
+            <p class="card-text">Send DHT22 temperature and humidity data to a lightweight web dashboard.</p>
+          </article>
+          <article class="card tool-card reveal">
+            <h3><a href="blog.html">Smart Relay with MQTT</a></h3>
+            <p class="card-text">Control relays remotely using MQTT and Home Assistant integration.</p>
+          </article>
+          <article class="card tool-card reveal">
+            <h3><a href="blog.html">ESP32-CAM Security Feed</a></h3>
+            <p class="card-text">Set up a low-cost IP camera with motion detection and local storage.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Workspace -->
+    <section class="section" aria-labelledby="google-workspace-title" style="background: var(--surface-elevated);">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 id="google-workspace-title" class="section-title">Google Workspace</h2>
+          <p class="section-subtitle">Admin best practices for schools, small businesses, and teams.</p>
+        </div>
+        <div class="tip-grid">
+          <article class="card tip-card reveal">
+            <h3><a href="blog.html">User Lifecycle Automation</a></h3>
+            <p class="card-text">Automate onboarding, offboarding, and group membership with Google Apps Script.</p>
+          </article>
+          <article class="card tip-card reveal">
+            <h3><a href="blog.html">Shared Drive Permissions</a></h3>
+            <p class="card-text">Design clean permission models that scale without turning into a access nightmare.</p>
+          </article>
+          <article class="card tip-card reveal">
+            <h3><a href="blog.html">Security & Compliance Report</a></h3>
+            <p class="card-text">Generate a quick security audit using the Admin console reports and alert rules.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Downloads -->
+    <section class="section" aria-labelledby="downloads-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 id="downloads-title" class="section-title">Featured Downloads</h2>
+          <p class="section-subtitle">Free templates, scripts, and checklists you can use right away.</p>
+        </div>
+        <div class="download-grid">
+          <div class="card download-card reveal">
+            <h3>IT Onboarding Checklist</h3>
+            <p class="card-text">A printable checklist for onboarding new employees securely and consistently.</p>
+            <a href="#" class="btn btn-sm btn-secondary" download>Download PDF</a>
+          </div>
+          <div class="card download-card reveal">
+            <h3>PowerShell Admin Scripts</h3>
+            <p class="card-text">Common scripts for AD user management, mailbox reports, and patch audits.</p>
+            <a href="#" class="btn btn-sm btn-secondary" download>Download ZIP</a>
+          </div>
+          <div class="card download-card reveal">
+            <h3>Network Troubleshooting Sheet</h3>
+            <p class="card-text">A one-page reference of ping, traceroute, and DNS diagnostic commands.</p>
+            <a href="#" class="btn btn-sm btn-secondary" download>Download PDF</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section" aria-labelledby="newsletter-title">
+      <div class="container">
+        <div class="newsletter reveal">
+          <h2 id="newsletter-title">Subscribe to the Newsletter</h2>
+          <p>Get one practical tech tip every week — no spam, no fluff, unsubscribe anytime.</p>
+          <form class="newsletter-form" action="#" method="post" aria-label="Newsletter subscription">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" aria-labelledby="testimonials-title" style="background: var(--surface-elevated);">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 id="testimonials-title" class="section-title">Community Voices</h2>
+          <p class="section-subtitle">What readers and learners are saying.</p>
+        </div>
+        <div class="testimonial-grid">
+          <figure class="testimonial-card reveal">
+            <blockquote>“Kiran’s Windows 11 guide saved me hours of trial and error. The steps are clear and the screenshots are spot on.”</blockquote>
+            <figcaption><cite>Rahul Deshmukh, System Administrator</cite></figcaption>
+          </figure>
+          <figure class="testimonial-card reveal">
+            <blockquote>“The networking tutorials finally made subnetting click for me. Highly recommended for students preparing for CCNA.”</blockquote>
+            <figcaption><cite>Priya Nair, Network Engineering Student</cite></figcaption>
+          </figure>
+          <figure class="testimonial-card reveal">
+            <blockquote>“Practical Google Workspace tips that I applied the same day. Our team’s file sharing got a lot cleaner.”</blockquote>
+            <figcaption><cite>Amit Singh, IT Manager</cite></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/script.js" defer></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://kirankadam.in/#person",
+          "name": "Kiran Kadam",
+          "url": "https://kirankadam.in/",
+          "sameAs": [
+            "https://github.com/kirankadam",
+            "https://www.linkedin.com/in/kirankadam"
+          ],
+          "jobTitle": "IT Administrator | Network Engineer | Cybersecurity Enthusiast",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Kiran Kadam"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://kirankadam.in/#website",
+          "url": "https://kirankadam.in/",
+          "name": "Kiran Kadam",
+          "description": "Practical tutorials and guides for IT administrators, network engineers, cybersecurity learners, and tech enthusiasts.",
+          "publisher": {
+            "@id": "https://kirankadam.in/#person"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://kirankadam.in/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Blog",
+          "@id": "https://kirankadam.in/#blog",
+          "url": "https://kirankadam.in/blog.html",
+          "name": "Kiran Kadam Blog",
+          "description": "Technical articles on Windows, networking, cybersecurity, AI, ESP32, and Google Workspace.",
+          "publisher": {
+            "@id": "https://kirankadam.in/#person"
+          }
+        }
+      ]
+    }
+  </script>
+</body>
+</html>

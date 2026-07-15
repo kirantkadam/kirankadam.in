@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script>
+    (function () {
+      const stored = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.setAttribute("data-theme", stored || (prefersDark ? "dark" : "light"));
+    })();
+  </script>
+
+  <title>Contact | Kiran Kadam</title>
+  <meta name="description" content="Get in touch with Kiran Kadam for collaborations, questions, or topic suggestions on IT administration, networking, cybersecurity, AI, and IoT.">
+  <meta name="author" content="Kiran Kadam">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kirankadam.in/contact.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kiran Kadam">
+  <meta property="og:title" content="Contact | Kiran Kadam">
+  <meta property="og:description" content="Get in touch with Kiran Kadam for collaborations, questions, or topic suggestions.">
+  <meta property="og:url" content="https://kirankadam.in/contact.html">
+  <meta property="og:image" content="https://kirankadam.in/images/og-home.svg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact | Kiran Kadam">
+  <meta name="twitter:description" content="Get in touch with Kiran Kadam for collaborations, questions, or topic suggestions.">
+  <meta name="twitter:image" content="https://kirankadam.in/images/og-home.svg">
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main-content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Contact</li>
+        </ol>
+      </div>
+    </nav>
+
+    <section class="hero" aria-labelledby="contact-title">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <div class="section-header reveal" style="text-align:left; margin:0; max-width:720px;">
+          <h1 id="contact-title" class="hero-title">Contact</h1>
+          <p class="hero-subtitle">Have a question, collaboration idea, or topic suggestion? Send a message and I’ll get back to you as soon as possible.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="form-title">
+      <div class="container">
+        <div class="hero-grid" style="align-items:stretch;">
+          <div class="reveal">
+            <h2 id="form-title" class="section-title" style="text-align:left;">Send a Message</h2>
+            <p style="margin-bottom:1.5rem;">Fill out the form below. I usually respond within 48 hours.</p>
+
+            <form class="card" action="#" method="post" aria-label="Contact form">
+              <div class="form-group" style="margin-bottom:1rem;">
+                <label for="name" style="display:block; margin-bottom:0.35rem; font-weight:600;">Name</label>
+                <input type="text" id="name" name="name" required style="width:100%; padding:0.75rem 1rem; border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--surface); color:var(--text); font-size:0.95rem;">
+              </div>
+              <div class="form-group" style="margin-bottom:1rem;">
+                <label for="email" style="display:block; margin-bottom:0.35rem; font-weight:600;">Email</label>
+                <input type="email" id="email" name="email" required style="width:100%; padding:0.75rem 1rem; border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--surface); color:var(--text); font-size:0.95rem;">
+              </div>
+              <div class="form-group" style="margin-bottom:1rem;">
+                <label for="subject" style="display:block; margin-bottom:0.35rem; font-weight:600;">Subject</label>
+                <select id="subject" name="subject" style="width:100%; padding:0.75rem 1rem; border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--surface); color:var(--text); font-size:0.95rem;">
+                  <option value="general">General Inquiry</option>
+                  <option value="collab">Collaboration</option>
+                  <option value="topic">Topic Suggestion</option>
+                  <option value="support">Support</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin-bottom:1.25rem;">
+                <label for="message" style="display:block; margin-bottom:0.35rem; font-weight:600;">Message</label>
+                <textarea id="message" name="message" rows="6" required style="width:100%; padding:0.75rem 1rem; border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--surface); color:var(--text); font-size:0.95rem; resize:vertical;"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+
+          <div class="reveal" style="display:flex; flex-direction:column; gap:1.5rem;">
+            <div class="card">
+              <h3 class="card-title">Email</h3>
+              <p class="card-text">For general questions and collaborations.</p>
+              <a href="mailto:hello@kirankadam.in">hello@kirankadam.in</a>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Connect</h3>
+              <p class="card-text">Find me on professional networks and code repositories.</p>
+              <ul class="footer-links" style="margin-top:0.75rem;">
+                <li><a href="https://www.linkedin.com/in/kirankadam" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com/kirankadam" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="#">YouTube</a></li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Response Time</h3>
+              <p class="card-text">I aim to respond to all messages within 1–2 business days.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/script.js" defer></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Kiran Kadam",
+      "url": "https://kirankadam.in/contact.html",
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "https://kirankadam.in/#person",
+        "name": "Kiran Kadam",
+        "email": "mailto:hello@kirankadam.in",
+        "sameAs": [
+          "https://github.com/kirankadam",
+          "https://www.linkedin.com/in/kirankadam"
+        ]
+      }
+    }
+  </script>
+</body>
+</html>

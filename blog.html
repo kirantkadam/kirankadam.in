@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script>
+    (function () {
+      const stored = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.setAttribute("data-theme", stored || (prefersDark ? "dark" : "light"));
+    })();
+  </script>
+
+  <title>Blog | Kiran Kadam — Tech Tutorials & Guides</title>
+  <meta name="description" content="Read the latest tutorials on Windows, networking, cybersecurity, AI tools, Google Workspace, ESP32 projects, and more from Kiran Kadam.">
+  <meta name="author" content="Kiran Kadam">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kirankadam.in/blog.html">
+
+  <meta property="og:type" content="blog">
+  <meta property="og:site_name" content="Kiran Kadam">
+  <meta property="og:title" content="Blog | Kiran Kadam — Tech Tutorials & Guides">
+  <meta property="og:description" content="Read the latest tutorials on Windows, networking, cybersecurity, AI tools, Google Workspace, ESP32 projects, and more.">
+  <meta property="og:url" content="https://kirankadam.in/blog.html">
+  <meta property="og:image" content="https://kirankadam.in/images/og-home.svg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog | Kiran Kadam — Tech Tutorials & Guides">
+  <meta name="twitter:description" content="Read the latest tutorials on Windows, networking, cybersecurity, AI tools, Google Workspace, ESP32 projects, and more.">
+  <meta name="twitter:image" content="https://kirankadam.in/images/og-home.svg">
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main-content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Blog</li>
+        </ol>
+      </div>
+    </nav>
+
+    <section class="hero" aria-labelledby="blog-title">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <div class="section-header reveal" style="text-align:left; margin:0; max-width:720px;">
+          <h1 id="blog-title" class="hero-title">Blog</h1>
+          <p class="hero-subtitle">Practical tutorials, troubleshooting guides, and deep dives for IT professionals and tech learners.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="articles-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 id="articles-title" class="section-title">Latest Articles</h2>
+          <p class="section-subtitle">New guides are added regularly. Use the search below to filter topics.</p>
+        </div>
+
+        <div class="hero-search" style="max-width: 480px; margin: 0 auto 2.5rem;" role="search" aria-label="Filter articles">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="hero-search" placeholder="Search articles, e.g. VLAN, Windows, AI..." aria-label="Filter articles">
+        </div>
+
+        <div class="article-grid">
+          <article class="article-card reveal" data-search="Windows 11 tweaks power users privacy performance" data-reading-time>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='800' height='450' fill='%23dbeafe'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='28' fill='%231d4ed8'%3EWindows 11%3C/text%3E%3C/svg%3E" alt="Windows 11 guide placeholder" class="article-thumb" width="800" height="450" loading="lazy">
+            <div class="article-body">
+              <span class="article-tag">Windows</span>
+              <h3 class="article-title"><a href="#">Essential Windows 11 Tweaks for Power Users</a></h3>
+              <p class="article-excerpt">Reclaim privacy, boost performance, and customize the taskbar with these practical Windows 11 settings every IT admin should know.</p>
+              <div class="article-meta">
+                <span>Jul 14, 2026</span>
+                <span class="reading-time">5 min read</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="article-card reveal" data-search="AI tools IT administrators automation documentation" data-reading-time>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='800' height='450' fill='%23dcfce7'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='28' fill='%23059669'%3EAI Tools%3C/text%3E%3C/svg%3E" alt="AI tools guide placeholder" class="article-thumb" width="800" height="450" loading="lazy">
+            <div class="article-body">
+              <span class="article-tag">Artificial Intelligence</span>
+              <h3 class="article-title"><a href="#">AI Tools That Actually Help IT Admins</a></h3>
+              <p class="article-excerpt">From log analysis to documentation, discover AI-powered tools that save hours every week without compromising security.</p>
+              <div class="article-meta">
+                <span>Jul 10, 2026</span>
+                <span class="reading-time">7 min read</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="article-card reveal" data-search="VLAN subnetting beginner networking CCNA" data-reading-time>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='800' height='450' fill='%23f3e8ff'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='28' fill='%237c3aed'%3ENetworking%3C/text%3E%3C/svg%3E" alt="Networking guide placeholder" class="article-thumb" width="800" height="450" loading="lazy">
+            <div class="article-body">
+              <span class="article-tag">Networking</span>
+              <h3 class="article-title"><a href="#">A Beginner’s Guide to VLANs and Subnetting</a></h3>
+              <p class="article-excerpt">Break down complex networks into simple, secure segments using VLANs and subnet masks with clear examples.</p>
+              <div class="article-meta">
+                <span>Jul 05, 2026</span>
+                <span class="reading-time">9 min read</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="article-card reveal" data-search="phishing defense checklist security awareness" data-reading-time>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='800' height='450' fill='%23fee2e2'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='28' fill='%23dc2626'%3ECybersecurity%3C/text%3E%3C/svg%3E" alt="Cybersecurity guide placeholder" class="article-thumb" width="800" height="450" loading="lazy">
+            <div class="article-body">
+              <span class="article-tag">Cybersecurity</span>
+              <h3 class="article-title"><a href="#">Phishing Defense Checklist for Teams</a></h3>
+              <p class="article-excerpt">Teach users how to spot suspicious emails, report them safely, and reduce your organization’s attack surface.</p>
+              <div class="article-meta">
+                <span>Jun 28, 2026</span>
+                <span class="reading-time">6 min read</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="article-card reveal" data-search="Google Workspace onboarding automation Apps Script" data-reading-time>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='800' height='450' fill='%23fef3c7'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='28' fill='%23d97706'%3EGoogle Workspace%3C/text%3E%3C/svg%3E" alt="Google Workspace guide placeholder" class="article-thumb" width="800" height="450" loading="lazy">
+            <div class="article-body">
+              <span class="article-tag">Google Workspace</span>
+              <h3 class="article-title"><a href="#">Automate User Onboarding in Google Workspace</a></h3>
+              <p class="article-excerpt">Use Google Apps Script to create users, assign groups, and send welcome emails with one click.</p>
+              <div class="article-meta">
+                <span>Jun 20, 2026</span>
+                <span class="reading-time">8 min read</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="article-card reveal" data-search="ESP32 Wi-Fi sensor dashboard IoT DHT22" data-reading-time>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='800' height='450' fill='%23e0f2fe'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='28' fill='%230287c7'%3EESP32%3C/text%3E%3C/svg%3E" alt="ESP32 project placeholder" class="article-thumb" width="800" height="450" loading="lazy">
+            <div class="article-body">
+              <span class="article-tag">ESP32</span>
+              <h3 class="article-title"><a href="#">ESP32 Wi-Fi Sensor Dashboard</a></h3>
+              <p class="article-excerpt">Send DHT22 temperature and humidity data to a lightweight web dashboard you can build in an afternoon.</p>
+              <div class="article-meta">
+                <span>Jun 12, 2026</span>
+                <span class="reading-time">11 min read</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-header reveal" style="margin-top: 3rem;">
+          <p class="section-subtitle">More articles are being prepared. Subscribe to the newsletter to get notified.</p>
+          <a href="index.html#newsletter-title" class="btn btn-primary">Subscribe</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="code-demo-title" style="background: var(--surface-elevated);">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 id="code-demo-title" class="section-title">Code Snippet Example</h2>
+          <p class="section-subtitle">Articles include copy-to-clipboard code blocks like this one.</p>
+        </div>
+        <div class="reveal" style="max-width: 800px; margin: 0 auto;">
+          <pre><code class="language-bash"># Update package lists and install essential tools on Ubuntu
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y curl git vim htop net-tools</code><button type="button" class="copy-code">Copy</button></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/script.js" defer></script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "@id": "https://kirankadam.in/#blog",
+      "url": "https://kirankadam.in/blog.html",
+      "name": "Kiran Kadam Blog",
+      "description": "Practical tutorials and guides for IT administrators, network engineers, cybersecurity learners, and tech enthusiasts.",
+      "publisher": {
+        "@id": "https://kirankadam.in/#person"
+      }
+    }
+  </script>
+</body>
+</html>

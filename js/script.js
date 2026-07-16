@@ -19,13 +19,13 @@
   };
 
   const NAV_LINKS = [
-    { label: "Home", href: "index.html" },
-    { label: "Blog", href: "blog.html" },
-    { label: "Categories", href: "index.html#categories" },
-    { label: "AI Tools", href: "index.html#ai-tools" },
-    { label: "Projects", href: "index.html#projects" },
-    { label: "About", href: "about.html" },
-    { label: "Contact", href: "contact.html" }
+    { label: "Home", href: "/index.html" },
+    { label: "Blog", href: "/blog.html" },
+    { label: "Categories", href: "/index.html#categories" },
+    { label: "AI Tools", href: "/index.html#ai-tools" },
+    { label: "Projects", href: "/index.html#projects" },
+    { label: "About", href: "/about.html" },
+    { label: "Contact", href: "/contact.html" }
   ];
 
   /* ---------- Components ---------- */
@@ -34,11 +34,11 @@
     const header = document.getElementById("site-header");
     if (!header) return;
 
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const currentPath = window.location.pathname.replace(/^\//, "") || "index.html";
 
     header.innerHTML = `
       <div class="container header-inner">
-        <a href="index.html" class="brand" aria-label="${SITE.name} home">
+        <a href="/index.html" class="brand" aria-label="${SITE.name} home">
           <span class="brand-mark">KK</span>
           <span class="brand-text">${SITE.name}</span>
         </a>
@@ -48,7 +48,8 @@
         <nav id="primary-nav" class="primary-nav" aria-label="Primary">
           <ul class="nav-list">
             ${NAV_LINKS.map(link => {
-              const isActive = currentPage === link.href || (currentPage === "" && link.href === "index.html");
+              const linkPath = link.href.replace(/^\//, "");
+              const isActive = currentPath === linkPath || (currentPath === "index.html" && linkPath === "index.html");
               return `<li><a href="${link.href}" ${isActive ? 'aria-current="page"' : ""}>${link.label}</a></li>`;
             }).join("")}
           </ul>
@@ -73,7 +74,7 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <a href="index.html" class="brand" aria-label="${SITE.name} home">
+            <a href="/index.html" class="brand" aria-label="${SITE.name} home">
               <span class="brand-mark">KK</span>
               <span class="brand-text">${SITE.name}</span>
             </a>
@@ -88,10 +89,10 @@
           <div>
             <h3 class="footer-heading">Explore</h3>
             <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/blog.html">Blog</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
             </ul>
           </div>
           <div>
@@ -106,9 +107,9 @@
           <div>
             <h3 class="footer-heading">Legal</h3>
             <ul class="footer-links">
-              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="/privacy.html">Privacy Policy</a></li>
               <li><a href="#">Terms of Use</a></li>
-              <li><a href="sitemap.xml">Sitemap</a></li>
+              <li><a href="/sitemap.xml">Sitemap</a></li>
             </ul>
           </div>
         </div>

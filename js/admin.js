@@ -11,8 +11,11 @@
     drafts: "kkAdminDrafts",
     settings: "kkAdminSettings",
     appearance: "kkAdminAppearance",
-    messages: "kkAdminMessages"
+    messages: "kkAdminMessages",
+    passwordHash: "kkAdminPasswordHash"
   };
+
+  const AUTH_KEY = "kkAdminAuth";
 
   const PUBLISHED_POSTS = [
     {
@@ -67,6 +70,139 @@
       .replace(/\s+/g, "-")
       .replace(/[^\w\-]+/g, "")
       .replace(/\-\-+/g, "-");
+  }
+
+  async function sha256(str) {
+    if (typeof crypto !== "undefined" && crypto.subtle) {
+      const encoder = new TextEncoder();
+      const buffer = await crypto.subtle.digest("SHA-256", encoder.encode(str));
+      return Array.from(new Uint8Array(buffer))
+        .map((b) => b.toString(16).padStart(2, "0"))
+        .join("");
+    }
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charCodeAt(i);
+      hash = (hash << 5) - hash + char;
+      hash = hash & hash;
+    }
+    return Math.abs(hash).toString(16);
+  }
+
+  function showDashboard() {
+    const login = document.getElementById("admin-login");
+    const layout = document.getElementById("admin-layout");
+    if (login) login.classList.add("hidden");
+    if (layout) layout.classList.remove("hidden");
+  }
+
+  function showLogin(firstTime) {
+    const login = document.getElementById("admin-login");
+    const layout = document.getElementById("admin-layout");
+    const title = document.getElementById("login-title");
+    const hint = document.getElementById("login-hint");
+    const submit = document.getElementById("login-submit");
+    if (login) login.classList.remove("hidden");
+    if (layout) layout.classList.add("hidden");
+    if (title) title.textContent = firstTime ? "Set Admin Password" : "Admin Login";
+    if (hint) {
+      hint.textContent = firstTime
+        ? "First time here? Create a password to protect this admin panel."
+        : "Enter your admin password to continue.";
+    }
+    if (submit) submit.textContent = firstTime ? "Set Password" : "Continue";
+  }
+
+  async function handleLogin(e) {
+    e.preventDefault();
+    const input = document.getElementById("login-password");
+    const password = input.value.trim();
+    if (!password) return;
+    const hash = await sha256(password);
+    const storedHash = getStorage(STORAGE_KEYS.passwordHash, "");
+
+    if (!storedHash) {
+      setStorage(STORAGE_KEYS.passwordHash, hash);
+      sessionStorage.setItem(AUTH_KEY, "true");
+      input.value = "";
+      startApp();
+      return;
+    }
+
+    if (hash === storedHash) {
+      sessionStorage.setItem(AUTH_KEY, "true");
+      input.value = "";
+      startApp();
+    } else {
+      const hint = document.getElementById("login-hint");
+      if (hint) {
+        hint.textContent = "Wrong password. Please try again.";
+        hint.style.color = "var(--danger)";
+      }
+    }
+  }
+
+  function handleLogout() {
+    sessionStorage.removeItem(AUTH_KEY);
+    const input = document.getElementById("login-password");
+    const hint = document.getElementById("login-hint");
+    if (input) input.value = "";
+    if (hint) hint.style.color = "";
+    checkAuth();
+  }
+
+  async function handleChangePassword(e) {
+    e.preventDefault();
+    const current = document.getElementById("current-password").value.trim();
+    const next = document.getElementById("new-password").value.trim();
+    const confirm = document.getElementById("confirm-password").value.trim();
+    if (next !== confirm) return alert("New passwords do not match.");
+
+    const storedHash = getStorage(STORAGE_KEYS.passwordHash, "");
+    if (storedHash && (await sha256(current)) !== storedHash) {
+      return alert("Current password is incorrect.");
+    }
+
+    setStorage(STORAGE_KEYS.passwordHash, await sha256(next));
+    document.getElementById("change-password-form").reset();
+    alert("Password updated.");
+  }
+
+  function checkAuth() {
+    const storedHash = getStorage(STORAGE_KEYS.passwordHash, "");
+    if (sessionStorage.getItem(AUTH_KEY) === "true" || !storedHash) {
+      if (!storedHash) {
+        showLogin(true);
+        document.getElementById("login-form").addEventListener("submit", handleLogin);
+      } else {
+        showDashboard();
+        startApp();
+      }
+    } else {
+      showLogin(false);
+      document.getElementById("login-form").addEventListener("submit", handleLogin);
+    }
+  }
+
+  function startApp() {
+    showDashboard();
+    renderDrafts();
+    loadSettings();
+    loadAppearance();
+
+    const statPages = document.getElementById("stat-pages");
+    const statPublished = document.getElementById("stat-published");
+    const statMessages = document.getElementById("stat-messages");
+    if (statPages) statPages.textContent = SITE_PAGES.length;
+    if (statPublished) statPublished.textContent = PUBLISHED_POSTS.length;
+    if (statMessages) statMessages.textContent = getStorage(STORAGE_KEYS.messages, []).length;
+
+    bindEvents();
+  }
+
+  function bindAuth() {
+    document.getElementById("btn-logout")?.addEventListener("click", handleLogout);
+    document.getElementById("change-password-form")?.addEventListener("submit", handleChangePassword);
   }
 
   function generatePostHTML(post, baseHref) {
@@ -553,18 +689,8 @@
   }
 
   function init() {
-    renderDrafts();
-    loadSettings();
-    loadAppearance();
-
-    const statPages = document.getElementById("stat-pages");
-    const statPublished = document.getElementById("stat-published");
-    const statMessages = document.getElementById("stat-messages");
-    if (statPages) statPages.textContent = SITE_PAGES.length;
-    if (statPublished) statPublished.textContent = PUBLISHED_POSTS.length;
-    if (statMessages) statMessages.textContent = getStorage(STORAGE_KEYS.messages, []).length;
-
-    bindEvents();
+    bindAuth();
+    checkAuth();
   }
 
   if (document.readyState === "loading") {

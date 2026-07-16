@@ -24,7 +24,20 @@
   <header id="site-header" class="site-header"></header>
 
   <main id="main-content">
-    <div class="admin-layout">
+    <div id="admin-login" class="admin-login">
+      <div class="admin-card" style="max-width: 420px; width: 100%;">
+        <h2 id="login-title" class="admin-title" style="font-size:1.5rem;">Admin Login</h2>
+        <p style="color:var(--text-muted); margin-bottom:1rem;">Enter your admin password to continue.</p>
+        <form id="login-form" class="admin-form">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="Admin password" required>
+          <button type="submit" class="btn btn-primary" id="login-submit">Continue</button>
+        </form>
+        <p id="login-hint" style="color:var(--text-muted); font-size:0.85rem; margin-top:0.75rem;"></p>
+      </div>
+    </div>
+
+    <div class="admin-layout hidden" id="admin-layout">
       <aside class="admin-sidebar" aria-label="Admin navigation">
         <h2>Admin</h2>
         <nav>
@@ -39,6 +52,7 @@
             <li><button type="button" data-tab="help">Help</button></li>
           </ul>
         </nav>
+        <button type="button" class="btn btn-sm btn-secondary" id="btn-logout" style="margin-top:1.5rem; width:100%;">Logout</button>
       </aside>
 
       <div class="admin-main">
@@ -46,7 +60,7 @@
         <p class="admin-subtitle">Manage your static website from one place.</p>
 
         <div class="admin-warning">
-          <strong>Important:</strong> This admin panel works entirely inside your browser. Changes are saved locally until you download files and push them to GitHub. It is not password-protected because the site is static.
+          <strong>Important:</strong> This admin panel works entirely inside your browser. Changes are saved locally until you download files and push them to GitHub. The password below keeps casual visitors out, but a determined person can still bypass it because the site has no backend server.
         </div>
 
         <section id="overview" class="admin-panel active">
@@ -229,6 +243,22 @@
               <button type="button" class="btn btn-secondary" id="btn-import-settings">Import JSON</button>
             </div>
           </form>
+
+          <div class="admin-card" style="margin-top:1.5rem;">
+            <h3 style="margin-bottom:0.75rem;">Change Admin Password</h3>
+            <form class="admin-form" id="change-password-form">
+              <label for="current-password">Current Password</label>
+              <input type="password" id="current-password" required>
+
+              <label for="new-password">New Password</label>
+              <input type="password" id="new-password" minlength="4" required>
+
+              <label for="confirm-password">Confirm New Password</label>
+              <input type="password" id="confirm-password" minlength="4" required>
+
+              <button type="submit" class="btn btn-primary">Update Password</button>
+            </form>
+          </div>
         </section>
 
         <section id="appearance" class="admin-panel">
